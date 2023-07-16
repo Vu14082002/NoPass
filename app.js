@@ -1,6 +1,8 @@
 var myArray0 = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
 var myArray1 = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
 var myArray2 = ["z", "x", "c", "v", "b", "n", "m"];
+const heightRoot = document.documentElement.clientHeight;
+console.log("root", heightRoot);
 
 function convertToChars(input, checkId) {
   var checkInt = parseInt(checkId);
@@ -57,3 +59,11 @@ const copy = function () {
 document.getElementById("submitId").onclick = encode;
 
 document.getElementById("copyButton").onclick = copy;
+document.addEventListener("keydown", function (event) {
+  if (event.key === "F12" || event.keyCode === 123) {
+    event.preventDefault();
+  }
+});
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});

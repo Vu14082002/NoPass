@@ -16,6 +16,10 @@
       background-repeat: no-repeat;
       height: 100vh;
     }
+
+    .en__show {
+      opacity: 0;
+    }
   </style>
 </head>
 
@@ -34,9 +38,9 @@
       <button type="submit" id="submitId" class="btn btn-info">Submit</button>
     </div>
     <div class="form-group container mt-3 show">
-      <label for="result">Result</label>
-      <input type="text" class="form-control" id="result" placeholder="result">
       <button type="button" id="copyButton" class="btn btn-danger container mt-4 ">Copy</button>
+      <label for="result" class="en__show">Result</label>
+      <input type="text" class="form-control en__show" id="result" placeholder="result">
     </div>
   </div>
 
